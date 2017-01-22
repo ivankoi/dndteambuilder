@@ -6,8 +6,10 @@ import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
@@ -32,6 +34,10 @@ public class DndTeamListControllerTest {
 
     @Test
     public void getTeamNewMapping() throws Exception {
-        mockMvc.perform(get("/team/new")).andDo(print()).andExpect(view().name("create_new_team")).andExpect(status().isOk());
+        mockMvc.perform(get("/team/new"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(view().name("create_new_team"))
+                .andExpect(model().attribute("raceOptions", notNullValue()));
     }
 }

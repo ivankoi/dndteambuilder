@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
+
 /**
  * Created by ivankoi on 1/22/2017.
  */
@@ -20,7 +22,7 @@ public class DndTeamListController {
 
     @RequestMapping(value = "/new", method = RequestMethod.GET)
     public String getCreateNewTeam(Model model) {
-        model.addAttribute("teamNewTeamParam", "teamNewTeamParamAttributeValue");
+        model.addAttribute("raceOptions", new ArrayList<>());
         return "create_new_team";
     }
 }
