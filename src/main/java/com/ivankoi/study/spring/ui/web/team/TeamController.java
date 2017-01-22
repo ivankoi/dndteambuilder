@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/team")
-public class DndTeamListController {
+public class TeamController {
 
     @Autowired
     TeamService teamService;

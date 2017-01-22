@@ -25,10 +25,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Created by ivank on 1/22/2017.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class DndTeamListControllerTest {
+public class TeamControllerTest {
 
     @InjectMocks
-    private DndTeamListController cut;
+    private TeamController cut;
 
     @Mock
     TeamService teamService;
