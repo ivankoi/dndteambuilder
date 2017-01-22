@@ -1,0 +1,6 @@
+-- Experiments:
+* Experiment with mapping of the DispatcherServlet. Currently it maps all requests
+* Experiment with Spring resource Servlet. Look at the mvc:resources and imports of static resources
+
+-- Questions:
+* How to monitor which request goes to DispatcherServlet and which to ResourceServlet

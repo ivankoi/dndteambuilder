@@ -26,8 +26,12 @@ public class DndTeamListControllerTest {
     }
 
     @Test
-    public void getTeamList() throws Exception {
+    public void getTeamListMapping() throws Exception {
         mockMvc.perform(get("/team/list")).andDo(print()).andExpect(view().name("team_list")).andExpect(status().isOk());
     }
 
+    @Test
+    public void getTeamNewMapping() throws Exception {
+        mockMvc.perform(get("/team/new")).andDo(print()).andExpect(view().name("create_new_team")).andExpect(status().isOk());
+    }
 }

@@ -17,4 +17,10 @@ public class DndTeamListController {
         model.addAttribute("teamList", "teamListFakeModelAttribute");
         return "team_list";
     }
+
+    @RequestMapping(value = "/new", method = RequestMethod.GET)
+    public String getCreateNewTeam(Model model) {
+        model.addAttribute("teamNewTeamParam", "teamNewTeamParamAttributeValue");
+        return "create_new_team";
+    }
 }
