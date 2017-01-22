@@ -1,5 +1,6 @@
-package com.ivankoi.study.spring;
+package com.ivankoi.study.spring.ui.web.team;
 
+import com.ivankoi.study.spring.ui.web.team.DndTeamListController;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;

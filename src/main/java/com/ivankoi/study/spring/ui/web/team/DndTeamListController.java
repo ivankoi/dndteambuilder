@@ -1,4 +1,4 @@
-package com.ivankoi.study.spring;
+package com.ivankoi.study.spring.ui.web.team;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
